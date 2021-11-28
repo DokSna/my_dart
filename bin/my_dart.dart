@@ -1,5 +1,21 @@
-import 'package:my_dart/my_dart.dart' as my_dart;
-
-void main(List<String> arguments) {
-  print('Hello world: ${my_dart.calculate()}!');
+void main() {
+  for (int i = 1; i <= 100; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      print('Super Quiz');
+    } else if (i % 3 == 0) {
+      print('Super');
+    } else if (i % 5 == 0) {
+      print('Quiz');
+    } else {
+      print(i);
+    }
+  }
 }
+/*
+Задача 1
+
+Напишите программу, которая выводит на экран числа от 1 до 100. 
+При этом вместо чисел, кратных трем, программа должна выводить слово «Super»,
+ а вместо чисел, кратных пяти — слово «Quiz». 
+ Если число кратно и 3, и 5, то программа должна выводить слово «Super Quiz»
+*/
