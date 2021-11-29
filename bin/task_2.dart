@@ -1,5 +1,5 @@
 void main() {
-  final int numbers = 2364556265465454;
+  final int numbers = 555;
   if (0 <= numbers && numbers < 10) {
     print(1);
   } else if (numbers >= 10 && numbers < 100) {
@@ -17,6 +17,15 @@ void main() {
   } else {
     print('У числа $numbers очень много знаков');
   }
+
+  int num = 236455;
+  int i = 1;
+  for (; num > 10; i++) {
+    // num = num ~/ 10;
+    num ~/= 10;
+    print(num);
+  }
+  print('Количество знаков: $i');
 }
 /*
 Задача 2
