@@ -17,7 +17,7 @@ void main() {
   } else {
     print('У числа $numbers очень много знаков');
   }
-
+// Вариант решения №2
   int num = 236455;
   int i = 1;
   for (; num > 10; i++) {
