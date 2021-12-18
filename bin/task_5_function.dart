@@ -4,24 +4,21 @@ void main() {
   List<String> listOfStrings = ["dart", "abc", "good luck"];
 
   // С помощью набора функций, сделаем декомпозицию задачи.
-  // функция будет преобразовывать строковые значения в числа
-  stringConversion(listOfStrings);
+  print(stringConversion(listOfStrings));
 }
 
 // в качестве параметра функция получает список со строками
-void stringConversion(arrayOfStrings) {
-  // for (String element in arrayOfStrings) {
-  for (var i = 0; i < arrayOfStrings.length; i++) {
-    // для каждого элемента списка вызовем функцию
-    // она будет обходить "символы в строке" и возвращать число,
+List stringConversion(arrayOfStrings) { //а вернет список с числами
+  List numList = <int>[];
+  for (int i = 0; i < arrayOfStrings.length; i++) {
+    // функция будет обходить "символы в строке" и возвращать число,
     // а мы это число умножим на позицию строки в списке arrayOfStrings
-    // [d, a, r, t] =>
-    charactersInLine(arrayOfStrings[i]);
+    numList.add(charactersInLine(arrayOfStrings[i]) * (i + 1));
   }
-  // return arrayOfStrings;
+  return numList;
 }
 
-numAbc(dynamic elNumAbc) {
+int numAbc(String elNumAbc) { //String приходит, int уходит :)
   switch (elNumAbc) {
     case 'a':
       return 1;
@@ -80,30 +77,21 @@ numAbc(dynamic elNumAbc) {
   }
 }
 
-void charactersInLine(elString) {
+int charactersInLine(elString) {
   // разобьем строку на массив из ее символов методом .split('')
   List<dynamic> abcList = elString.split('');
-  // abcList = [d, a, r, t] цмкл [a, b, c] цикл [g, o, o, d,  , l, u, c, k]
+  // abcList = [d, a, r, t]
 
   // для каждого знака в списке (кроме пробелов), вернем его позицию в алфавите
-  for (dynamic i = 0; i < abcList.length; i++) {
-    // for (dynamic i = 0; i < 1; i++) {
+  // а затем прибавим к сумме позиций букв в строке
+  int sumPlace = 0;
+  for (int i = 0; i < abcList.length; i++) {
     if (abcList[i] != ' ') {
-      print(numAbc(abcList[i]));
-      // abcList[i] = numAbc(abcList[i]);
+      sumPlace = sumPlace + numAbc(abcList[i]);
     }
   }
-  print(abcList);
+  return sumPlace;
 }
-//   for (dynamic elAbc in abcList) {
-//     if (elAbc != ' ') {
-//       numAbc(elAbc);
-//       // print('elAbc: $elAbc.');
-//     } else {
-//       continue;
-//     }
-//   }
-//   // return elString;
 
 // ДЗ по функциям
 // Задача
