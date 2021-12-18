@@ -26,7 +26,7 @@ void main() {
     }
   }
   // вариант №3
-  myList.forEach((element) => element == myValue ? isPresent3 = true : isPresent3 = isPresent3 );
+  // myList.forEach((element) => element == myValue ? isPresent3 = true : isPresent3 = isPresent3 );
   print(isPresent);
   print(isPresent2);
   print(isPresent3);
