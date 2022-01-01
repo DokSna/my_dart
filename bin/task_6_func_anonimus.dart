@@ -2,20 +2,17 @@ void main() {
   List<String> list_1 = ['a', 'ab', 'abc'];
   List<String> list_2 = ['abcde', 'ab', 'abc'];
   List<String> list_3 = [];
-  int num_1 = sumElements(list_1);
-  print(num_1);
-  int num_2 = sumElements(list_2);
-  print(num_2);
-  int num_3 = sumElements(list_3);
-  print(num_3);
+  sumElements(list_1);
+  sumElements(list_2);
+  sumElements(list_3);
 }
 
-int sumElements(List listNum) {
+void sumElements(List listNum) {
   int numCheck = 0;
   for (String el in listNum) {
     numCheck = numCheck + el.length;
   }
-  return numCheck;
+  print(numCheck);
 }
 /*
 ДЗ по анонимным функциям
