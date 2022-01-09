@@ -13,7 +13,7 @@ void summ(List myList) {
   int numCheck = 0;
   for (int el in myList) {
     if (el > 0) {
-      numCheck = numCheck + el;
+      numCheck += el;
     }
   }
   print(numCheck);
