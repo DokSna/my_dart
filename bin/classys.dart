@@ -12,8 +12,8 @@ void main() {
   myCar2.start();
   myCar2.stop();
   */
-  Car myCar3 = Car('Toyota', color: 'Green');
-  myCar3.start();
+  // Car myCar3 = Car('Toyota', color: 'Green');
+  // myCar3.start();
   Car myCar4 = Car('Mazda');
   myCar4.start();
   Car myCar5 = Car.named();
@@ -27,17 +27,21 @@ class Car {
   var color;
   // int powers;
 // именованые конструкторы
-  Car.named() {
+  Car.named() : this('Ford', 'Blue');
+/*  Car.named() {
     carName = 'Ford';
     color = 'Blue';
-  }
-  Car.fromColor(var coloric) {
+  }*/
+  Car.fromColor(var color) : this('RENO', color);
+/*  Car.fromColor(var coloric) {
     carName = 'RENO';
     this.color = coloric;
   }
+*/
   // Конструктор
   // Car(this.carName, [this.color = 'Red']);
-  Car(this.carName, {this.color = 'Red'});
+  // Car(this.carName, {this.color = 'Red'});
+  Car(this.carName, [this.color = 'White']);
 /*
   Car(String carName, var color) {
     this.carName = carName;
