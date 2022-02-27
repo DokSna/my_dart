@@ -14,7 +14,7 @@ class Car {
       : carName = name,
         percentWay = per.roundToDouble() {
     print('Other Work');
-    percentWay = 100;
+    // percentWay = 100;
   }
 
   void infoCar() {
