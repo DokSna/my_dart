@@ -1,7 +1,7 @@
 void main() {
-  var myCar = Car(); //используется "Сеттер" по умолчанию
-  myCar.carName = 'Ford'; //используется "Геттер" по умолчанию
-  print(myCar.carName);
+  var myCar = Car();
+  myCar.carName = 'Ford'; //используется "Сеттер" по умолчанию
+  print(myCar.carName); //используется "Геттер" по умолчанию
   myCar.percentage = -23.5; //вызываем собственный "Сеттер"
   print(myCar.percentage); //вызываем собственный "Геттер"
 }
