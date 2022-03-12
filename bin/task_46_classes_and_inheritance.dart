@@ -33,7 +33,7 @@ class Cuboid {
 
 class Cube extends Cuboid {
   Cube(length) : super(length, length, length) {
-    this.nameCub = 'Cube';
+    super.nameCub = 'Cube';
   }
 }
 
