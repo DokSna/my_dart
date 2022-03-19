@@ -5,7 +5,7 @@
 
 void main() {
   print(someValue(25));
-  print(someValue(25));
+  print(someValue(null));
 }
 
 int someValue(int? value) {

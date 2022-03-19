@@ -9,6 +9,7 @@
 
 void main() {
   int? age; // nullable
+  // ignore: prefer_typing_uninitialized_variables
   var name;
   print(name);
   print(age);
