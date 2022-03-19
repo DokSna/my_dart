@@ -24,6 +24,7 @@ void main() {
 
 class Car {
   late String carName;
+  // ignore: prefer_typing_uninitialized_variables
   var color;
   // int powers;
 // именованые конструкторы

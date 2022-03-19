@@ -19,6 +19,7 @@ class Car<T> {
 
   Car(this.id, this.carName);
 
+  // ignore: avoid_shadowing_type_parameters
   void move<T>(T speed) {
     print("The $carName. ID number: $id. Speed car: $speed");
   }

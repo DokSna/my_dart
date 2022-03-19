@@ -10,7 +10,7 @@ class Car {
   late String carName;
   late double _percenrWay;
 
-  void set percentage(double per) {
+  set percentage(double per) {
     _percenrWay = (per > 100 || per < 0) ? _percenrWay = 0 : _percenrWay = per;
   }
 
